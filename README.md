@@ -4,6 +4,7 @@ This is the final project of Machine Learning Course
 The project aims to predict the funture price of one security based on the historical intraday data with different kinds of machine learning models.
 ## Data Processing
 The raw data is in the data_proejct2.zip. Each row in the excel include the time, bid or ask, price and volume. And I used this original data to create features for machine learning models. 
+
 The minimum time interval of the time series data is 0.1 second which means from 1/21/2018  10:20:02 PM to 1/21/2018  11:58:59 PM, every 0.1 second we have data. Therefore, the original data might have multiple data in the same 0.1-second, we combined them together in the same 0.1-second. What’s more, the original data might have missing data in the some 0.1-second times, we used the future nearest data as the data in that 0.1-second.
 Therefore, There are ten features in total which are best_ask_price, best_bid_price, mid_price, best_ask_size(size of best ask price), best_bid_size(size of best bid price), total_ask_size(sum of all the ask size), total_bid_size(sum of all the bid size), ask_weighted_average_price(weighted average price of ask calculated by sum(ask price * ask size) / total_ask_size), bid_weighted_average_price(weighted average price of bid calculated by sum(bid price * bid size) / total_bid_size), mid_weighted_average_price. These things are included in data.csv
 ## Linear Regression
